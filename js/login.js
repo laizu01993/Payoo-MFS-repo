@@ -5,7 +5,18 @@ document.getElementById('btn-login').addEventListener('click', function(event){
     event.preventDefault();
     console.log('login button clicked');
 
-// step:3 get the phone number
+// step:3 get the phone number and pin
 const phoneNumber = document.getElementById('phone-number').value;
-console.log(phoneNumber)
+const pinNumber = document.getElementById('pin-number').value
+console.log(pinNumber);
+
+// step:4 validate phone and pin (this is temporary)
+if(phoneNumber === '5' && pinNumber === '1234'){
+    console.log('you are logged in');
+    window.location.href = '/home.html';
+}
+    else{
+        alert('wrong phone number or pin');
+    }
+
 })
